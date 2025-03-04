@@ -22,7 +22,14 @@ namespace MantDataStructure
 
 		protected void btnLookUp_Click(object sender, EventArgs e)
 		{
-			
+			//Declare a new array
+			String[] strCategoryArray = new String[5];
+			//Get the array from the session variable
+			strCategoryArray = Session["strCategoryArray"] as String[];
+			//Use the array as normal
+			Int32 i32Index = Convert.ToInt32(txtIndex.Text);
+			txtCategory.Text = strCategoryArray[i32Index];
+
 		}
 	}
 }
